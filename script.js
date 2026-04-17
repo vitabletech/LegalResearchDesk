@@ -38,14 +38,27 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    // Mobile Dropdown Accordion
+    const dropdownToggle = document.querySelector('.dropdown-toggle');
+    if (dropdownToggle) {
+        dropdownToggle.addEventListener('click', (e) => {
+            if (window.innerWidth <= 991) {
+                e.preventDefault();
+                dropdownToggle.parentElement.classList.toggle('active');
+            }
+        });
+    }
+
     // Close mobile menu when a link is clicked
-    navLinks.forEach(link => {
+    document.querySelectorAll('.nav-link:not(.dropdown-toggle)').forEach(link => {
         link.addEventListener('click', () => {
             navMenu.classList.remove('active');
             
             const icon = hamburger.querySelector('i');
-            icon.classList.remove('fa-times');
-            icon.classList.add('fa-bars');
+            if (icon) {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
         });
     });
 
@@ -102,5 +115,64 @@ document.addEventListener('DOMContentLoaded', () => {
                 link.classList.add('active');
             }
         });
-    });
-});
+    }); // End of window scroll event listener
+    
+    // Gallery Modal with Navigation
+    const modal = document.getElementById("image-modal");
+    const modalImg = document.getElementById("modal-img");
+    const closeBtn = document.querySelector(".close-modal");
+    const prevBtn = document.querySelector(".prev-modal");
+    const nextBtn = document.querySelector(".next-modal");
+    const galleryItems = document.querySelectorAll(".gallery-item img");
+    
+    let currentIndex = 0;
+
+    if (modal && modalImg && closeBtn) {
+        galleryItems.forEach((img, index) => {
+            img.addEventListener("click", function() {
+                modal.style.display = "block";
+                modalImg.src = this.src;
+                currentIndex = index;
+            });
+        });
+
+        closeBtn.addEventListener("click", function() {
+            modal.style.display = "none";
+        });
+
+        // Close modal when clicking outside the image
+        modal.addEventListener("click", function(e) {
+            if (e.target === modal) {
+                modal.style.display = "none";
+            }
+        });
+        
+        // Navigation Logic
+        const showImage = (index) => {
+            if (index < 0) index = galleryItems.length - 1;
+            if (index >= galleryItems.length) index = 0;
+            currentIndex = index;
+            modalImg.src = galleryItems[currentIndex].src;
+        };
+
+        if (prevBtn && nextBtn) {
+            prevBtn.addEventListener("click", (e) => {
+                e.stopPropagation();
+                showImage(currentIndex - 1);
+            });
+            nextBtn.addEventListener("click", (e) => {
+                e.stopPropagation();
+                showImage(currentIndex + 1);
+            });
+        }
+        
+        // Keyboard navigation
+        document.addEventListener("keydown", (e) => {
+            if (modal.style.display === "block") {
+                if (e.key === "ArrowLeft") showImage(currentIndex - 1);
+                if (e.key === "ArrowRight") showImage(currentIndex + 1);
+                if (e.key === "Escape") modal.style.display = "none";
+            }
+        });
+    }
+}); // End of DOMContentLoaded event listener

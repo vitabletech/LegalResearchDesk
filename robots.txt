@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://legalresearchdesk.vitabletech.in/sitemap.xml

@@ -1647,6 +1647,34 @@ body.menu-open {
 .footer-logo { display: block; }
 .mobile-nav-item[type='button'] { border: 0; background: transparent; font: inherit; cursor: pointer; }
 
+/* Practice and deed pages on narrow screens */
+.practice-main-content { min-width: 0; }
+@media (max-width: 768px) {
+  .navbar, .navbar.scrolled { padding: 7px 0; }
+  .site-brand, .navbar.scrolled .site-brand { width: 60px; height: 68px; }
+  .site-brand img, .navbar.scrolled .site-brand img { width: 60px; height: 68px; }
+  .practice-page-hero {
+    height: auto;
+    min-height: 0;
+    padding: 118px 20px 38px;
+  }
+  .practice-hero-content { width: 100%; padding: 0; }
+  .practice-page-title {
+    max-width: 100%;
+    margin: 0;
+    font-size: clamp(2rem, 8vw, 2.7rem);
+    line-height: 1.12;
+    overflow-wrap: anywhere;
+  }
+  .breadcrumb-nav { margin-bottom: 0; }
+  .breadcrumb-nav ol { flex-wrap: wrap; row-gap: 4px; }
+  .deed-content, .resource-links-section { padding-top: 34px; }
+  .deed-icon { font-size: 3rem; }
+  .deed-content h2 { font-size: clamp(1.7rem, 7vw, 2.2rem); }
+  .deed-lead { max-width: 34rem; font-size: 1rem; line-height: 1.65; overflow-wrap: break-word; }
+  .practice-main-content { overflow-wrap: break-word; }
+}
+
 /* Dedicated About page and supplied brand mark */
 .site-brand { display: flex; flex: 0 0 auto; align-items: center; justify-content: center; width: 76px; height: 88px; line-height: 0; }
 .site-brand img { width: 76px; height: 88px; object-fit: contain; }
@@ -1817,8 +1845,8 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible { outline: 3px s
 .avatar-contact-link:hover { background: #142541; color: #fff; }
 .avatar-email-link { display: inline-block; margin-left: 14px; color: #715600; font-weight: 700; }
 @keyframes avatar-card-enter { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
-@media (max-width: 768px) { .floating-avatar { right: 14px; bottom: calc(84px + env(safe-area-inset-bottom)); } }
-@media (max-width: 380px) { .floating-avatar { right: 10px; } .floating-avatar-trigger { width: 78px; height: 78px; } }
+@media (max-width: 768px) { .floating-avatar { right: 10px; bottom: calc(78px + env(safe-area-inset-bottom)); } .floating-avatar-trigger { width: 64px; height: 64px; } }
+@media (max-width: 380px) { .floating-avatar-trigger { width: 48px; height: 48px; } }
 @media (prefers-reduced-motion: reduce) { .floating-avatar, .floating-avatar-trigger, .avatar-contact-card { animation: none; transition: none; transform: none; } }
 
 .legal-page-content { max-width: 850px; }

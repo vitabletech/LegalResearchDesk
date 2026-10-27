@@ -14,15 +14,15 @@ export default function AssociatesSection() {
             <article className="associate-card" key={associate.name}>
               <div className="associate-avatar" aria-hidden="true">{associate.name.split(' ').map((part) => part[0]).join('')}</div>
               <div>
-                <p className="associate-role">Team Member</p>
+                <p className="associate-role">{associate.title}</p>
                 <h3>{associate.name}</h3>
-                <p><i className="fas fa-location-dot" aria-hidden="true" /> {associate.location}</p>
-                <p><i className="fas fa-graduation-cap" aria-hidden="true" /> {associate.education}</p>
+                {associate.enrollment && <p><i className="fas fa-id-card" aria-hidden="true" /> Enrollment No. {associate.enrollment}</p>}
+                {associate.location && <p><i className="fas fa-location-dot" aria-hidden="true" /> {associate.location}</p>}
+                {associate.education && <p><i className="fas fa-graduation-cap" aria-hidden="true" /> {associate.education}</p>}
               </div>
             </article>
           ))}
         </div>
-        <p className="no-partners-note">Shahil Khan and Anjali Namdev are team members. There are no partners.</p>
       </div>
     </section>
   );

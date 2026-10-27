@@ -59,6 +59,7 @@ export default function FloatingAvatar() {
           <a href={whatsappHref} className="avatar-contact-link" target="_blank" rel="noopener noreferrer">
             <i className="fab fa-whatsapp" aria-hidden="true" /> WhatsApp
           </a>
+          <a href="https://ig.me/m/adv.adarshsinghofficial" className="avatar-contact-link avatar-instagram-link" target="_blank" rel="noopener noreferrer"><i className="fab fa-instagram" aria-hidden="true" /> Instagram</a>
           <a href="mailto:info.itsyogiraj@gmail.com" className="avatar-email-link">Send an email</a>
       </section>
       <p className="avatar-guide-bubble" aria-hidden="true" hidden={!guide.visible || open}>{guide.message}</p>

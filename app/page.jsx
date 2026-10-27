@@ -6,16 +6,16 @@ import ServicesSection from '@/components/home/services';
 import WhyMeSection from '@/components/home/why-me';
 
 export const metadata = {
-  title: { absolute: 'Adv. Adarsh Singh Kushwah | Legal Research & Document Review in Gwalior' },
-  description: 'Legal research, document review, drafting and documentation support from Adv. Adarsh Singh Kushwah in Gwalior, with remote support where suitable.',
+  title: { absolute: 'Adarsh Singh & Associate | Legal Help Across India' },
+  description: 'Find an advocate and request legal consultation across India. First consultation free. Civil, criminal, family, property and corporate legal support.',
   alternates: { canonical: '/' },
   openGraph: {
-    title: 'Adv. Adarsh Singh Kushwah | Legal Research & Document Review in Gwalior',
-    description: 'Legal research, document review, drafting and documentation support in Gwalior and remotely.',
+    title: 'Adarsh Singh & Associate | Legal Help Across India',
+    description: 'Lawyers across India. Legal support wherever you are.',
     url: '/',
     type: 'website',
   },
-  twitter: { card: 'summary_large_image', title: 'Adarsh Singh Kushwah | Legal Research' },
+  twitter: { card: 'summary_large_image', title: 'Adarsh Singh & Associate | Legal Help Across India' },
 };
 
 export default function HomePage() {

@@ -24,7 +24,8 @@ export default function AboutPage() {
         <div className="container">
           <span className="subtitle">Profile &amp; Team</span>
           <h1>Adv. Adarsh Singh Kushwah</h1>
-          <p>Advocate · Legal Consultant · eDiscovery &amp; Litigation Support</p>
+          <p>Advocate · Legal Consultant · Special Correspondent, Hindustan Samaj Newspaper</p>
+          <p lang="hi">आदर्श सिंह कुशवाह — अधिवक्ता । विशेष संवाददाता, हिंदुस्तान समाज समाचार पत्र, ग्वालियर, मध्य प्रदेश</p>
         </div>
       </section>
       <AboutSection />

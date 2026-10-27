@@ -11,7 +11,7 @@ export function generateStaticParams() {
 export function generateMetadata({ params }) {
   const page = contentPages.find(({ slug }) => slug === params.slug);
   if (!page) return {};
-  const description = page.kind === 'practice'
+  const description = page.kind === 'practice' || page.kind === 'service'
     ? `${page.summary} Discuss a defined requirement with Adv. Adarsh Singh Kushwah in Gwalior or remotely.`
     : page.kind === 'deed'
       ? 'Information about document research and review support from Adarsh Singh Kushwah.'

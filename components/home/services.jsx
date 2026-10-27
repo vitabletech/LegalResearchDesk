@@ -9,7 +9,7 @@ export default function ServicesSection() {
     <section id="services" className="section">
       <div className="container">
         <div className="text-center" data-aos="fade-up">
-          <span className="subtitle">What I Do</span>
+          <span className="subtitle">How We Help</span>
           <h2 className="section-title">Legal Services &amp; <span className="gold-text">Expertise</span></h2>
           <p className="section-description">Documentation assistance, research, and review support for individuals, businesses, and legal teams.</p>
         </div>

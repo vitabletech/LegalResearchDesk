@@ -7,7 +7,7 @@ import { sectionPageHref, siteUrl } from '@/lib/site-data';
 
 export const metadata = {
   title: 'Legal Guides & Blog',
-  description: 'Practical guides on property documents, agreement review and preparing for an online legal consultation in India.',
+  description: 'Practical Indian legal guides on bail, property documents, agreement review and preparing for an online legal consultation.',
   alternates: { canonical: '/blog.html' },
   openGraph: {
     title: 'Legal Guides & Blog | Adarsh Singh & Associate',
